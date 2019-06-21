@@ -56,7 +56,7 @@ setup(
         'pandas>=0.23.0',
         'scipy>=1.0.0',
         'tensorflow_hub>=0.2',
-        'tensorflow_probability',
+        # 'tensorflow_probability',  # remove requirement to use tfp-nightly
     ],
     extras_require={
         'tf': ['tensorflow>=1.7'],
