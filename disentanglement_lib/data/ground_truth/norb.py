@@ -110,7 +110,7 @@ def _load_chunks(path_template, chunk_names):
 
 def _read_binary_matrix(filename):
   """Reads and returns binary formatted matrix stored in filename."""
-  with tf.gfile.GFile(filename, "rb") as f:
+  with tf.io.gfile.GFile(filename, "rb") as f:
     s = f.read()
     magic = int(np.frombuffer(s, "int32", 1))
     ndim = int(np.frombuffer(s, "int32", 1, 4))
