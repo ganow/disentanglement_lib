@@ -23,6 +23,7 @@ from disentanglement_lib.data.ground_truth import util
 import numpy as np
 from six.moves import range
 import tensorflow as tf
+import h5py
 
 
 SHAPES3D_PATH = os.path.join(
