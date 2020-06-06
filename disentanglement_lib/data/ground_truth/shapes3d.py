@@ -32,7 +32,6 @@ SHAPES3D_PATH = os.path.join(
 )
 
 
-
 class Shapes3D(ground_truth_data.GroundTruthData):
   """Shapes3D dataset.
 
@@ -53,7 +52,7 @@ class Shapes3D(ground_truth_data.GroundTruthData):
       data = np.load(f, encoding="latin1")
     images = data["images"]
     labels = data["labels"]
-    n_samples = np.prod(images.shape[0:6])
+    n_samples = np.prod(labels.shape[0:6])
     self.images = (
         images.reshape([n_samples, 64, 64, 3]).astype(np.float32) / 255.)
     features = labels.reshape([n_samples, 6])
